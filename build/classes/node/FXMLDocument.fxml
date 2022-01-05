@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="657.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="node.FXMLDocumentController">
+    <children>
+      <TabPane id="tab_pane" prefHeight="557.0" prefWidth="1059.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tab_1" onSelectionChanged="#tab_selected" text="Availability Modelling">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="521.0" prefWidth="295.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="764.0" AnchorPane.topAnchor="14.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="574.0" prefWidth="292.0">
+                                 <children>
+                                    <FlowPane prefHeight="567.0" prefWidth="292.0">
+                                       <children>
+                                          <Pane prefHeight="64.0" prefWidth="288.0">
+                                             <children>
+                                                <SplitPane layoutX="7.0" layoutY="14.0" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <Label fx:id="myMessage" prefHeight="44.0" prefWidth="124.0" text="Project Name" />
+                                                   </items>
+                                                </SplitPane>
+                                                <SplitPane layoutX="126.0" layoutY="14.0" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <TextField fx:id="project_name" onAction="#input_change" onKeyReleased="#input_change" prefHeight="25.0" prefWidth="129.0" />
+                                                   </items>
+                                                </SplitPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane prefHeight="64.0" prefWidth="288.0">
+                                             <children>
+                                                <SplitPane layoutX="7.0" layoutY="14.0" prefHeight="31.0" prefWidth="114.0" style="-fx-border-color: transparent; -fx-background-color: transparent;">
+                                                   <items>
+                                                      <Label prefHeight="44.0" prefWidth="124.0" text="Application Name" />
+                                                   </items>
+                                                </SplitPane>
+                                                <SplitPane layoutX="126.0" layoutY="14.0" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <TextField fx:id="application_id" prefHeight="25.0" prefWidth="149.0" />
+                                                   </items>
+                                                </SplitPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane prefHeight="64.0" prefWidth="288.0">
+                                             <children>
+                                                <SplitPane layoutX="7.0" layoutY="14.0" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <Label prefHeight="31.0" prefWidth="114.0" text="Node Name" />
+                                                   </items>
+                                                </SplitPane>
+                                                <SplitPane layoutX="126.0" layoutY="14.0" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <TextField fx:id="node_name" prefHeight="25.0" prefWidth="129.0" />
+                                                   </items>
+                                                </SplitPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane prefHeight="64.0" prefWidth="288.0">
+                                             <children>
+                                                <SplitPane layoutX="7.0" layoutY="14.0" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <Label prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: transparent;" text="Node Identifier" />
+                                                   </items>
+                                                </SplitPane>
+                                                <SplitPane layoutX="126.0" layoutY="14.0" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <ComboBox fx:id="node_identifier" onAction="#function_node_identifier" prefHeight="25.0" promptText="Existing Node Identifiers" />
+                                                   </items>
+                                                </SplitPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane prefHeight="64.0" prefWidth="288.0">
+                                             <children>
+                                                <SplitPane layoutX="7.0" layoutY="14.0" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <Label prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: transparent;" text="Parent Identifier" />
+                                                   </items>
+                                                </SplitPane>
+                                                <SplitPane layoutX="126.0" layoutY="14.0" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <ComboBox fx:id="parent_node" prefHeight="25.0" promptText="Select Identifier" />
+                                                   </items>
+                                                </SplitPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane prefHeight="64.0" prefWidth="288.0">
+                                             <children>
+                                                <SplitPane layoutX="7.0" layoutY="14.0" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <Label prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: transparent;" text="Node Type" />
+                                                   </items>
+                                                </SplitPane>
+                                                <SplitPane layoutX="126.0" layoutY="14.0" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <MenuButton fx:id="node_type" mnemonicParsing="false" prefHeight="25.0" text="Choose Node Type">
+                                                        <items>
+                                                          <MenuItem id="simple_resource_node" mnemonicParsing="false" onAction="#node_type_function" text="Simple resource node" />
+                                                          <MenuItem id="weak_resource_node" mnemonicParsing="false" onAction="#node_type_function" text="Weak resource node" />
+                                                            <MenuItem id="resource_group_node" mnemonicParsing="false" onAction="#node_type_function" text="Resource group node" />
+                                                            <MenuItem id="application_node" disable="true" mnemonicParsing="false" onAction="#node_type_function" text="Application node" />
+                                                            <MenuItem id="dependency_node" mnemonicParsing="false" onAction="#node_type_function" text="Dependency node" />
+                                                        </items>
+                                                      </MenuButton>
+                                                   </items>
+                                                </SplitPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane prefHeight="64.0" prefWidth="288.0">
+                                             <children>
+                                                <SplitPane layoutX="7.0" layoutY="14.0" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <Label prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: transparent;" text="Link Type" />
+                                                   </items>
+                                                </SplitPane>
+                                                <SplitPane layoutX="126.0" layoutY="14.0" prefHeight="31.0" prefWidth="163.0" style="-fx-background-color: transparent;">
+                                                   <items>
+                                                      <MenuButton fx:id="link_type" mnemonicParsing="false" prefHeight="25.0" text="Choose Link Type">
+                                                         <items>
+                                                            <MenuItem id="resource_link" mnemonicParsing="false" onAction="#link_type_function" text="Resource link" />
+                                                            <MenuItem id="resource_group_link" mnemonicParsing="false" onAction="#link_type_function" text="Resource group link" />
+                                                            <MenuItem id="application_link" mnemonicParsing="false" onAction="#link_type_function" text="Application link" />
+                                                            <MenuItem id="local_or_shared_link" mnemonicParsing="false" onAction="#link_type_function" text="Local or shared link" />
+                                                            <MenuItem id="global_link_or_external_link" mnemonicParsing="false" onAction="#link_type_function" text="Global link or external link" />
+                                                         </items>
+                                                      </MenuButton>
+                                                   </items>
+                                                </SplitPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane prefHeight="61.0" prefWidth="292.0">
+                                             <children>
+                                                <Button fx:id="add_node_btn" layoutX="20.0" layoutY="1.0" mnemonicParsing="false" onAction="#add_node" prefHeight="25.0" prefWidth="102.0" text="Add Node" />
+                                                <Button fx:id="btn_to_save_to_database" layoutX="20.0" layoutY="35.0" mnemonicParsing="false" onAction="#function_to_save_to_database" prefHeight="25.0" prefWidth="102.0" text="Save" />
+                                                <Button fx:id="add_node_btn12" layoutX="139.0" layoutY="35.0" mnemonicParsing="false" onAction="#function_to_load_to_database" prefHeight="25.0" prefWidth="59.0" text="Load" />
+                                                <Button layoutX="213.0" layoutY="35.0" mnemonicParsing="false" onAction="#reset_all_fields" prefHeight="25.0" prefWidth="65.0" text="Reset" />
+                                                <Button fx:id="remove" layoutX="139.0" layoutY="2.0" mnemonicParsing="false" onAction="#remove_node" prefHeight="25.0" prefWidth="102.0" text="Remove" />
+                                             </children>
+                                          </Pane>
+                                          <Pane prefHeight="61.0" prefWidth="292.0">
+                                             <children>
+                                                <Button layoutX="20.0" layoutY="35.0" mnemonicParsing="false" onAction="#open_pdf" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: cornflowerblue;" text="Help" textFill="WHITE" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <ScrollPane hbarPolicy="ALWAYS" layoutX="295.0" layoutY="14.0" prefHeight="500.0" prefWidth="761.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="305.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="14.0">
+                          <content>
+                            <AnchorPane prefWidth="0.0">
+                                 <children>
+                                    <Pane fx:id="my_pane" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_2" onSelectionChanged="#tab_selected" text="Model Analysis">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane hbarPolicy="ALWAYS" layoutY="47.0" prefHeight="480.0" prefWidth="1059.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="47.0">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <Pane fx:id="my_pane1" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <Button layoutX="218.0" layoutY="14.0" mnemonicParsing="false" onAction="#rotate" text="Rotate" />
+                        <Button fx:id="hide_btn" layoutX="73.0" layoutY="14.0" mnemonicParsing="false" onAction="#hide" prefHeight="25.0" prefWidth="130.0" text="Hide Identifier" />
+                        <Button layoutX="293.0" layoutY="14.0" mnemonicParsing="false" onAction="#save_to_text_fie" text="Save" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
